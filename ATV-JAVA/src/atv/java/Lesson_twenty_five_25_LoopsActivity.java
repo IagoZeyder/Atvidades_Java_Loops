@@ -35,12 +35,12 @@ public class Lesson_twenty_five_25_LoopsActivity {
         System.out.println(" ");
         double quantidadeCompra = 0;
         double preco;
-        double valorTotal;
+        double valorTotal = 0;
         boolean sair = false;
         double troco = 0;
         double valorPagar = 0;
         String continuarCompra;
-        String output;   
+        String output = " ";   
         do{            
             System.out.print("Deseja Realizar a compra [ S/N ]");
             continuarCompra = read.next();
@@ -48,26 +48,30 @@ public class Lesson_twenty_five_25_LoopsActivity {
                 System.out.println("Digite a quantidade de produtos da compra: ");
                 quantidadeCompra= read.nextDouble();
                 System.out.println(" ");
-                valorTotal = 0;
+                valorTotal = 0; 
                 for(int i=1; i<=quantidadeCompra; i++){
                     System.out.println("Informe o valor do produto");
                     preco = read.nextDouble();
                     System.out.println(" ");
                     preco += preco;
                     valorTotal += preco;
-                    output = "Produto" + i + ": R$" + preco + "\n";
+                    output += "Produto" + i + ": R$" + preco + "\n";
                 }
+                output += "Total: R$ " +valorTotal+"\n";
                 do{
                 System.out.println("Valor total da compra" + "[ " + valorTotal + " ]");
                 System.out.println("Seu pagameno");  
                 valorPagar = read.nextDouble();
                 if(valorPagar >= valorTotal){
-                    troco = valorTotal - valorPagar;
+                    troco += valorPagar - valorTotal;
+                    output += "Dinheiro: R$" + valorPagar+"\n";
+                    output += "troco: " + troco+"\n";
                     sair = true;
                     
                 }
                 else{
                     System.out.println("Valor insuficiente");
+                    sair = false;
                 }
                     
              }while(sair = false);
@@ -80,7 +84,7 @@ public class Lesson_twenty_five_25_LoopsActivity {
         
         System.out.print(" Valor total da compra é"+"[ "+ valorTotal +" ]");
         System.out.print("Seu pagamento é:" + valorPagar);
-        System.out.print("Seu troco é"+ troco);
+        System.out.print("Seu troco é: "+ troco);
         
         
         
