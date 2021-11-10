@@ -32,14 +32,6 @@ public class Lesson_Twenty_Eight_28_LoopsActivity {
      else if(numberPrimo % 2 != 0){
          System.out.println(numberPrimo + " é um número primo");         
          primo = true;
-     }
-        
-        
-        
-        
-        
-        
-        
-        
+     }                                                                
     }           
 }
