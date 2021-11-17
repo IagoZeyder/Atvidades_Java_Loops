@@ -22,9 +22,10 @@ public class Lesson_Twenty_Nine_29_LoopsActivity {
         System.out.println(" ");
         Scanner read = new Scanner(System.in);
         System.out.println("Entre com o segundo numero");
-        int num2 = read.nextInt();        
+        int num2 = read.nextInt();
+        boolean primo;
         for (int i =1; i<=num2; i++){        
-            boolean primo = true;                               
+            primo = true;                               
             for(int j=2; j<i; j++){
                 if(i % j==0){/* [j] sempre vai ser dois*/                
                 primo = false;                        
